@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Welcome to some random guy's blog!</h2>
+<p>My name is Thomas Le, and I'm studying full-stack development. Here, you'll find some of my reflections on some of projects I've done in the past. I hope you find these posts somewhat insightful in the way I think.</p>
+
+    <h2>Posts</h2>
+    {% if posts %}
+        <ul>
+        {% for post in posts %}
+            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>There are no posts.</p>
+    {% endif %}
+
+{% endblock %}
