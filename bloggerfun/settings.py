@@ -22,7 +22,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = "_n-vw4#ox1_syn!*flihu6)4sc_yxsa3!he"
+SECRET_KEY = "valh7(-0m@yhh%f*=8sd7=ry^0(9-8fo8pdpg!-+1qj8kly6@a"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     # greater consistency between gunicorn and `./manage.py runserver`. See:
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
-
+    'django.contrib.staticfiles'
 ]
 
 MIDDLEWARE = [
