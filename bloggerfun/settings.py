@@ -21,7 +21,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "@y#)j366&kjg^wevw#4le4#%w@p++m-w98$6413kr%qg7zq9zs"
+
+SECRET_KEY = "_n-vw4#ox1_syn!*flihu6)4sc_yxsa3!he"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -39,7 +40,7 @@ INSTALLED_APPS = [
     # greater consistency between gunicorn and `./manage.py runserver`. See:
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
-    'django.contrib.staticfiles'
+
 ]
 
 MIDDLEWARE = [
@@ -116,7 +117,7 @@ DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Allow all host headers
-ALLOWED_HOSTS = ['https://some-coding-blog.herokuapp.com/']
+ALLOWED_HOSTS = ['*']
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
