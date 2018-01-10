@@ -5,27 +5,22 @@
   <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
   <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     </head>
-<nav class="navbar navbar-expand navbar-dark bg-secondary">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand">
   <a class="navbar-brand" href="/">Some Coding Blog</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-
-  <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li {% if request.path == '/contact/' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
         <a class="nav-link" href="/contact">Contact<span class="sr-only"></span></a>
       </li>
-
-  </div>
+    </ul>
 </nav>
+
+<!-- Body format -->
     <body>
         <div class="container mt-4">
         <h1>{% block title %}{% endblock %}</h1>
         {% block content %}
-
         {% endblock %}
         </div>
     </body>

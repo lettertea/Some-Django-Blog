@@ -17,25 +17,9 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$blue:    #007bff !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
-$red:     #FF7851 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #FFCE67 !default;
-$green:   #56CC9D !default;
-$teal:    #20c997 !default;
-$cyan:    #6CC3D5 !default;
 
 $primary:       #479e86 !default;
-$secondary:     #ef767c !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$secondary:     rgba(80, 124, 137, 0.8) !default;
 
 // Body
 $body-bg:                   $gray-100 !default;
@@ -47,5 +31,62 @@ $body-color:                $gray-700 !default;
 $headings-font-family:        "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
 $headings-color:              $gray-800 !default;
 
+$bgDefault      : #ef767c;
+$bgHighlight    : #5e91a1;
+$colDefault     : #d9d9d9;
+$colHighlight   : #ffffff;
+$dropDown       : true;
+.navbar {
+  background-color: $bgDefault;
+  .navbar-brand {
+    color: $colHighlight;}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    .nav-link {
+      color: $colDefault;
+      border-radius: .55rem;
+      margin: 0 0.25em;
+      &:not(.disabled) {
+        &:hover, &:focus {
+          color: $colHighlight; }}}
+    .nav-item.active, .nav-item.show {
+      .nav-link, .nav-link:hover, .nav-link:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .navbar-toggler-icon {
+      color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar .navbar-nav .open .dropdown-menu {
+    .dropdown-item {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    .dropdown-item.active {
+      color: $colHighlight;
+      background-color: $bgHighlight; }}}
 
-@import "../bootstrap/scss/bootstrap";
+
+
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/type";
+@import "../bootstrap/scss/grid";
+@import "../bootstrap/scss/dropdown";
+@import "../bootstrap/scss/nav";
+@import "../bootstrap/scss/navbar";
+@import "../bootstrap/scss/utilities";
+
