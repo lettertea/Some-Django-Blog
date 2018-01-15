@@ -1,27 +1,37 @@
 <html>
-    <head>
-        <title>Some Coding Blog</title>
-        {% load static %}
-  <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
-  <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
-    </head>
+
+<head>
+    <title>Some Coding Blog</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/css/style.css' %}" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand">
-  <a class="navbar-brand" href="/">Some Coding Blog</a>
+    <a class="navbar-brand" href="/">Some Coding Blog</a>
     <ul class="navbar-nav mr-auto">
-      <li {% if request.path == '/contact/' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
-        <a class="nav-link" href="/contact">Contact<span class="sr-only"></span></a>
-      </li>
+        <li {% if request.path == '/contact/' %} class="nav-item active" {% else %} class="nav-item" {% endif %}>
+            <a class="nav-link" href="/contact">Contact<span class="sr-only"></span></a>
+        </li>
     </ul>
 </nav>
 
 <!-- Body format -->
-    <body>
-        <div class="container mt-4">
-        <h1>{% block title %}{% endblock %}</h1>
-        {% block content %}
-        {% endblock %}
-        </div>
-    </body>
+
+<body>
+    <div class="container mt-4 margin-spacer">
+        <h1>{% block title %}{% endblock %}</h1> {% block content %} {% endblock %}
+    </div>
+ <footer class="footer">
+    <span>
+        <a href="https://github.com/nashkenazy" target="_blank" class="social-icon"> <i class="fa fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/thomas-le-497b04153/" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a>
+
+</span>
+
+</footer>
+</body>
+
 </html>

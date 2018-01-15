@@ -8,7 +8,7 @@
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #f7f7f9 !default;
-$gray-300: #eceeef !default;
+$gray-300: #dde1e3 !default;
 $gray-400: #ced4da !default;
 $gray-500: #aaa !default;
 $gray-600: #888 !default;
@@ -18,24 +18,26 @@ $gray-900: #212529 !default;
 $black:    #000 !default;
 
 
-$primary:       #479e86 !default;
-$secondary:     rgba(80, 124, 137, 0.8) !default;
+$code-blue:#395760 !default;
+$primary: #2f9d66 !default;
+
 
 // Body
 $body-bg:                   $gray-100 !default;
-$body-color:                $gray-700 !default;
+$body-color:                $gray-800 !default;
 
 
 // Fonts
 
+$code-font: "Courier New" !important;
 $headings-font-family:        "Montserrat", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$headings-color:              $gray-800 !default;
+$headings-color:              $gray-900 !default;
 
 $bgDefault      : #ef767c;
 $bgHighlight    : #5e91a1;
 $colDefault     : #d9d9d9;
 $colHighlight   : #ffffff;
-$dropDown       : true;
+
 .navbar {
   background-color: $bgDefault;
   .navbar-brand {
@@ -54,28 +56,70 @@ $dropDown       : true;
       .nav-link, .nav-link:hover, .nav-link:focus {
         color: $colHighlight;
         background-color: $bgHighlight; }}}
-  .navbar-toggle {
-    border-color: $bgHighlight;
-    &:hover, &:focus {
-      background-color: $bgHighlight; }
-    .navbar-toggler-icon {
-      color: $colDefault; }}
-  .navbar-collapse,
-  .navbar-form {
-    border-color: $colDefault; }
-  .navbar-link {
-    color: $colDefault;
+}
+
+
+code {
+    font-family: $code-font;
+  background-color: $gray-300;
+  padding: 0px 3px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+.margin-spacer {
+  margin-bottom: 200px;
+}
+
+
+.footer {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px; /* Set the fixed height of the footer here */
+  line-height: 80px; /* Vertically center the text there */
+  background-color: $primary;
+}
+
+.social-icon {
+   font-size: 22px;
+    color: #fff;
+    text-decoration: none;
     &:hover {
-      color: $colHighlight; }}}
-@media (max-width: 767px) {
-  .navbar .navbar-nav .open .dropdown-menu {
-    .dropdown-item {
-      color: $colDefault;
-      &:hover, &:focus {
-        color: $colHighlight; }}
-    .dropdown-item.active {
-      color: $colHighlight;
-      background-color: $bgHighlight; }}}
+      color: #fff;
+
+    }
+}
+
+.fa {
+    border-radius: 8px;
+    padding:12px 40px;
+    margin: 0px 10px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    &:hover {
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  transform: translateY(-5px);
+    }
+}
+
+.fa-github:hover {
+    background-color: #6e5494;
+}
+
+.fa-linkedin:hover {
+    background-color: #0077B5;
+}
 
 
 
@@ -89,4 +133,3 @@ $dropDown       : true;
 @import "../bootstrap/scss/nav";
 @import "../bootstrap/scss/navbar";
 @import "../bootstrap/scss/utilities";
-
