@@ -1,49 +1,18 @@
-# Heroku Django Starter Template
+# Django-RPS
+My personal blog where users can view my reflections of the projects I've done.
+# Prerequisites
+- Django 2.0.x Download and Installation [here](https://www.djangoproject.com/download/).
+- Python 3.x.x+. Download and Installation [here](https://www.python.org/downloads/).
+# Installation
+- Clone the Repository
+```
+$ git clone https://github.com/nashkenazy/Some-Django-Blog.git
+```
+# Running the Application
+Open the root folder and do one of the following:
+1. Run the `start-site.bat` file
+2. Open command line in root directory and run the following command: `python manage.py runserver`.
 
-An utterly fantastic project starter template for Django 2.0.
-
-## Features
-
-- Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
-- Enhancements to Django's static file serving functionality via WhiteNoise.
-- Latest Python 3.6 runtime environment.
-
-## How to Use
-
-To use this project, follow these steps:
-
-1. Create your working environment.
-2. Install Django (`$ pipenv install django`)
-3. Create a new project using this template
-
-## Creating Your Project
-
-Using this template to create a new Django app is easy::
-
-    $ django-admin.py startproject --template=https://github.com/heroku/heroku-django-template/archive/master.zip --name=Procfile helloworld
-
-(If this doesn't work on windows, replace `django-admin.py` with `django-admin`)
-
-You can replace ``helloworld`` with your desired project name.
-
-## Deployment to Heroku
-
-    $ git init
-    $ git add -A
-    $ git commit -m "Initial commit"
-
-    $ heroku create
-    $ git push heroku master
-
-    $ heroku run python manage.py migrate
-
-See also, a [ready-made application](https://github.com/heroku/python-getting-started), ready to deploy.
-
-
-## License: MIT
-
-## Further Reading
-
-- [Gunicorn](https://warehouse.python.org/project/gunicorn/)
-- [WhiteNoise](https://warehouse.python.org/project/whitenoise/)
-- [dj-database-url](https://warehouse.python.org/project/dj-database-url/)
+The server should run on `127.0.0.1:8000`.
+## License
+No license.
