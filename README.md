@@ -1,5 +1,7 @@
-# Django-RPS
-My personal blog where users can view my reflections of the projects I've done.
+# Some-Django-Blog
+Live demo [here](https://some-coding-blog.herokuapp.com).
+
+A personal blog where users can preview the admin's blog and view each of them individually.
 # Prerequisites
 - Django 2.0.x Download and Installation [here](https://www.djangoproject.com/download/).
 - Python 3.x.x+. Download and Installation [here](https://www.python.org/downloads/).
