@@ -1,10 +1,10 @@
 # Some-Django-Blog
 Live demo [here](https://some-coding-blog.herokuapp.com).
 
-A personal blog where users can preview the admin's blog and view each of them individually.
+A personal blog where users can view the admin's blog posts.
 # Prerequisites
-- Django 2.0.x Download and Installation [here](https://www.djangoproject.com/download/).
-- Python 3.x.x+. Download and Installation [here](https://www.python.org/downloads/).
+- Django 2.0.x - Download and Installation [here](https://www.djangoproject.com/download/).
+- Python 3.x.x - Download and Installation [here](https://www.python.org/downloads/).
 # Installation
 - Clone the Repository
 ```
