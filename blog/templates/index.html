@@ -2,17 +2,23 @@
 {% block content %}
 <!-- Intro -->
 <h2>Welcome to some random guy's blog!</h2>
-<p>My name is Thomas Le, and I'm studying full-stack development. Here are my reflections on some of my projects.</p>
+<p>My name is Thomas Le, and I study full-stack development. Although my words may be clumsy, I believe that these reflections should provide insight on my progress in coding.</p>
 <!-- Post depending on what blog is being viewed -->
-    <h2>Posts</h2>
+    <hr />
+
     {% if posts %}
-        <ul>
         {% for post in posts %}
-            <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
+
+<div class="card mb-3">
+  <div class="card-body">
+    <h1 class="card-header"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
+    <p class="card-text">{{post.body|safe|linebreaks|truncatewords:50}} <a href="{{ post.get_absolute_url }}">view post</a></p>
+    <p class="card-text"><small class="text-muted">{{post.posted}}</small></p>
+  </div>
+</div>
+
         {% endfor %}
-        </ul>
     {% else %}
         <p>There are no posts.</p>
     {% endif %}
-
 {% endblock %}

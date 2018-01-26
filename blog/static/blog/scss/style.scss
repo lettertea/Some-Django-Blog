@@ -1,4 +1,4 @@
-// Minty 4.0.0
+// Minty 4.0.0 *Edited
 // Bootswatch
 
 //
@@ -23,7 +23,7 @@ $primary: #2f9d66 !default;
 
 
 // Body
-$body-bg:                   $gray-100 !default;
+$body-bg:                   #fefefe !default;
 $body-color:                $gray-800 !default;
 
 
@@ -38,6 +38,7 @@ $bgHighlight    : #5e91a1;
 $colDefault     : #d9d9d9;
 $colHighlight   : #ffffff;
 
+// Navbar settings
 .navbar {
   background-color: $bgDefault;
   .navbar-brand {
@@ -65,12 +66,13 @@ code {
   padding: 0px 3px;
 }
 
+// For footer functionality
 html {
   position: relative;
   min-height: 100%;
 }
 
-
+// Spacer between content and footer
 .margin-spacer {
   margin-bottom: 200px;
 }
@@ -81,11 +83,12 @@ html {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 80px; /* Set the fixed height of the footer here */
-  line-height: 80px; /* Vertically center the text there */
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
   background-color: $primary;
 }
 
+// Make button icons white
 .social-icon {
    font-size: 22px;
     color: #fff;
@@ -96,10 +99,11 @@ html {
     }
 }
 
+// Icon size, shadows, and hover animations
 .fa {
     border-radius: 8px;
-    padding:12px 40px;
-    margin: 0px 10px;
+    padding: 8px 28px;
+    margin: 0px 6px;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1);
     -o-transition:.5s;
     -ms-transition:.5s;
@@ -113,6 +117,8 @@ html {
     }
 }
 
+// Icon colors
+
 .fa-github:hover {
     background-color: #6e5494;
 }
@@ -120,7 +126,6 @@ html {
 .fa-linkedin:hover {
     background-color: #0077B5;
 }
-
 
 
 @import "../bootstrap/scss/functions";
@@ -133,3 +138,8 @@ html {
 @import "../bootstrap/scss/nav";
 @import "../bootstrap/scss/navbar";
 @import "../bootstrap/scss/utilities";
+@import "../bootstrap/scss/card";
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0);
+}
